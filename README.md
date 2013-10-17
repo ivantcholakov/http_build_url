@@ -3,6 +3,8 @@ PHP fallback function http_build_url()
 
 For servers without pecl_http package installed.
 
+See http://php.net/manual/en/function.http-build-url.php
+
 Based on the original C code from pecl_http-1.7.6  
 http://svn.php.net/viewvc/pecl/http/tags/RELEASE_1_7_6/php_http_url_api.h?view=markup  
 http://svn.php.net/viewvc/pecl/http/tags/RELEASE_1_7_6/http_url_api.c?view=markup
