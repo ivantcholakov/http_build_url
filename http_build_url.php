@@ -14,6 +14,9 @@
  * @author Ivan Tcholakov <ivantcholakov@gmail.com>, 2013
  * @license The MIT License, http://opensource.org/licenses/MIT
  *
+ * Code repository:
+ * @link https://github.com/ivantcholakov/http_build_url
+ *
  * Usage:
  * Place this file on a suitable directory of your PHP system.
  * Inside a common bootstrap file within your system insert the following piece of code:
