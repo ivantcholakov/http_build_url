@@ -68,7 +68,6 @@ if (!function_exists('http_build_url')) {
 
         static $server_https;
         static $default_host;
-        static $default_local_host;
         static $request_uri;
         static $request_uri_no_query;
         static $request_uri_path;
@@ -82,11 +81,14 @@ if (!function_exists('http_build_url')) {
         }
 
         if (!isset($default_host)) {
-            $default_host = isset($_SERVER['HOSTNAME']) ? $_SERVER['HOSTNAME'] : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '');
-        }
 
-        if (!isset($default_local_host)) {
-            $default_local_host = function_exists('gethostname') ? gethostname() : php_uname('n');
+            $default_host =
+                isset($_SERVER['HOSTNAME']) ? $_SERVER['HOSTNAME']
+                : (isset($_SERVER['SERVER_NAME']) ? $_SERVER['SERVER_NAME'] : '');
+
+            if ($default_host == '') {
+                $default_host = function_exists('gethostname') ? gethostname() : php_uname('n');
+            }
         }
 
         if (!isset($request_uri)) {
@@ -367,7 +369,7 @@ if (!function_exists('http_build_url')) {
         // Ensure host presence.
 
         if (!isset($url['host'])) {
-            $url['host'] = $default_host ? $default_host : $default_local_host;
+            $url['host'] = $default_host;
         }
 
         // Hide standard ports.
