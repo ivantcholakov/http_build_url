@@ -64,6 +64,7 @@ if (!function_exists('http_build_url')) {
         // Initialization
 
         static $all_keys = array('scheme', 'user', 'pass', 'host', 'port', 'path', 'query', 'fragment');
+        static $all_keys_flipped;
 
         static $server_https;
         static $default_host;
@@ -71,6 +72,10 @@ if (!function_exists('http_build_url')) {
         static $request_uri;
         static $request_uri_no_query;
         static $request_uri_path;
+
+        if (!isset($all_keys_flipped)) {
+            $all_keys_flipped = array_flip($all_keys);
+        }
 
         if (!isset($server_https)) {
             $server_https = !empty($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on';
@@ -121,6 +126,9 @@ if (!function_exists('http_build_url')) {
         if (!is_array($parts)) {
             $parts = parse_url($parts);
         }
+
+        $url = array_intersect_key($url, $all_keys_flipped);
+        $parts = array_intersect_key($parts, $all_keys_flipped);
 
         foreach ($all_keys as $key) {
 
