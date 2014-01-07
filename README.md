@@ -6,8 +6,8 @@ For servers without pecl_http package installed.
 See http://php.net/manual/en/function.http-build-url.php
 
 Based on the original C code from pecl_http-1.7.6  
-http://svn.php.net/viewvc/pecl/http/tags/RELEASE_1_7_6/php_http_url_api.h?view=markup  
-http://svn.php.net/viewvc/pecl/http/tags/RELEASE_1_7_6/http_url_api.c?view=markup
+http://git.php.net/?p=pecl/http/pecl_http.git;a=blob;f=php_http_url_api.h;h=940db8e61e68e1a544896a691079ad33c5b633ff;hb=b84c1c206944586e218e57a864ab9671194a10cf  
+http://git.php.net/?p=pecl/http/pecl_http.git;a=blob;f=http_url_api.c;h=8a70b0f2fb18b3435110b436b7f1f68023cafb15;hb=b84c1c206944586e218e57a864ab9671194a10cf
 
 Some snippets by Sébastien Corne have been used.  
 https://github.com/Seebz/Snippets/blob/master/php/http_build_url.php
