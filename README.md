@@ -34,3 +34,5 @@ echo http_build_url();
 For testing this fallback implementation, place the file http_build_url_test.php
 on the web-server too, and open it with a browser. Don't forget to remove it when
 it is no longer needed.
+
+Live test demo: http://iridadesign.com/starter-public-edition-4/www/non-mvc/http_build_url_test.php
