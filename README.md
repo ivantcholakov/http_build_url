@@ -12,7 +12,8 @@ http://git.php.net/?p=pecl/http/pecl_http.git;a=blob;f=http_url_api.c;h=8a70b0f2
 Some snippets by Sébastien Corne have been used.  
 https://github.com/Seebz/Snippets/blob/master/php/http_build_url.php
 
-Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2013  
+Version: 1.7.6  
+Author: Ivan Tcholakov <ivantcholakov@gmail.com>, 2014  
 License: The MIT License, http://opensource.org/licenses/MIT
 
 Usage:  
