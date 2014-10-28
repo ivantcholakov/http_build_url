@@ -37,3 +37,7 @@ on the web-server too, and open it with a browser. Don't forget to remove it whe
 it is no longer needed.
 
 Live test demo: http://iridadesign.com/starter-public-edition-4/www/non-mvc/http_build_url_test.php
+
+*An important note:* Don't use host autodetection (or more generally base url autodetection)
+implemented by this function, it relies first on $_SERVER['HTTP_HOST'].  
+See http://carlos.bueno.org/2008/06/host-header-injection.html
