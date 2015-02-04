@@ -11,7 +11,7 @@
  * Some snippets by Sébastien Corne have been used.
  * @link https://github.com/Seebz/Snippets/blob/master/php/http_build_url.php
  *
- * @version 1.7.6.2
+ * @version 1.7.6.3
  * @author Ivan Tcholakov <ivantcholakov@gmail.com>, 2014-2015
  * @license The MIT License, http://opensource.org/licenses/MIT
  *
@@ -140,12 +140,12 @@ if (!function_exists('http_build_url')) {
         $parts = array_intersect_key($parts, $all_keys_flipped);
 
         // Unfortunately the 'query' part can not be an array type.
-        if (isset($url['query']) && is_array($url['query'])) {
+        if (isset($url['query']) && !is_string($url['query'])) {
             unset($url['query']);
         }
 
         // Unfortunately the 'query' part can not be an array type.
-        if (isset($parts['query']) && is_array($parts['query'])) {
+        if (isset($parts['query']) && !is_string($parts['query'])) {
             unset($parts['query']);
         }
 
