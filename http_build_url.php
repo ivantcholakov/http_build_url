@@ -139,12 +139,12 @@ if (!function_exists('http_build_url')) {
         $url = array_intersect_key($url, $all_keys_flipped);
         $parts = array_intersect_key($parts, $all_keys_flipped);
 
-        // Unfortunately the 'query' part can not be an array type.
+        // Unfortunately the 'query' part can not be an array or object type.
         if (isset($url['query']) && !is_string($url['query'])) {
             unset($url['query']);
         }
 
-        // Unfortunately the 'query' part can not be an array type.
+        // Unfortunately the 'query' part can not be an array or object type.
         if (isset($parts['query']) && !is_string($parts['query'])) {
             unset($parts['query']);
         }
