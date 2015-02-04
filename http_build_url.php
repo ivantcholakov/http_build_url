@@ -11,8 +11,8 @@
  * Some snippets by Sébastien Corne have been used.
  * @link https://github.com/Seebz/Snippets/blob/master/php/http_build_url.php
  *
- * @version 1.7.6.1
- * @author Ivan Tcholakov <ivantcholakov@gmail.com>, 2014
+ * @version 1.7.6.2
+ * @author Ivan Tcholakov <ivantcholakov@gmail.com>, 2014-2015
  * @license The MIT License, http://opensource.org/licenses/MIT
  *
  * Code repository:
