@@ -165,10 +165,19 @@ if (!function_exists('http_build_url')) {
 
                 if (isset($url[$key])) {
 
-                    $url[$key] = (string) $url[$key];
+                    if (is_array($url[$key])) {
 
-                    if ($url[$key] == '') {
-                        unset($url[$key]);
+                        if (empty($url[$key])) {
+                            unset($url[$key]);
+                        }
+
+                    } else {
+
+                        $url[$key] = (string) $url[$key];
+
+                        if ($url[$key] == '') {
+                            unset($url[$key]);
+                        }
                     }
                 }
 
@@ -324,7 +333,7 @@ if (!function_exists('http_build_url')) {
 
                 //---------------------------------------------------------------------
 
-           } else {
+            } else {
 
                 if (isset($parts['query'])) {
 
@@ -340,6 +349,10 @@ if (!function_exists('http_build_url')) {
 
                 $url['query'] = $query;
             }
+        }
+
+        if (isset($url['query']) && is_array($url['query'])) {
+            $url['query'] = http_build_str($url['query']);
         }
 
         // Fragment
