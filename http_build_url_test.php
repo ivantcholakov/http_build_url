@@ -411,7 +411,7 @@ $code = <<<EOT
 // TODO: This test needs to be checked against the PECL implementation of http_build_url().
 echo print_d(http_build_url('http://user:pass@www.example.com:8080/pub/index.php?a=b#files',  array('query' => array('foo' => 'bar'))));
 // Expected result:
-// http://user:pass@www.example.com:8080/pub/index.php?foo=bar#files
+// http://user:pass@www.example.com:8080/pub/index.php?a=b#files
 EOT;
 
 highlight_string($code);
@@ -430,7 +430,7 @@ $code = <<<EOT
 parse_str(\$url['query'], \$url['query']);
 echo print_d(http_build_url(\$url));
 // Expected result:
-// http://user:pass@www.example.com:8080/pub/index.php?a=b#files
+// http://user:pass@www.example.com:8080/pub/index.php#files
 EOT;
 
 highlight_string($code);
